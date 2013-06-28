@@ -39,7 +39,7 @@ keynote was given by Jim Hugunin, creator of numeric (the precursor to NumPy),
 Jython, IronPython, and co-designer of AspectJ.
 
 In 2005, the community was split between two different core numerical libraries
--- numeric and numarray, making code exchange and shared development hard.
+|emdash| numeric and numarray, making code exchange and shared development hard.
 Travis Oliphant, who had been working on a successor to both libraries, opened
 the conference with a presentation of the new core package now known as
 NumPy. In order to move the new library forward, the number and length of talks
@@ -223,7 +223,7 @@ of shorter pieces presenting specific scientific, engineering, and educational
 applications.
 This year's special issue had fewer, but longer articles
 focusing on some of the more advanced features of
-the core stack of scientific tools for Python [Perez]_, [vanderWalt]_,
+the core stack of scientific tools for Python [Perez]_, [VanderWalt]_,
 [Behnel]_, [Ramachandran]_.
 
 
@@ -274,7 +274,7 @@ Appendix: Reviewer Questionnaire
 
 - Is the code made publicly available and does the article sufficiently
   describe how to access it?  We aim not to publish papers that essentially
-  advertise propetiary software.  Therefore, if the code is not publicly
+  advertise proprietary software.  Therefore, if the code is not publicly
   available, please provide a one- to two- sentence response to each of the
   following questions:
 
@@ -333,7 +333,7 @@ References
 
 .. [Perez] Pérez, Fernando, Brian E. Granger, and John D. Hunter. "Python: an ecosystem for scientific computing." Computing in Science & Engineering 13.2 (2011): 13-21.
 
-.. [vanderWalt] van der Walt, Stefan, S Chris Colbert, and Gael Varoquaux. "The NumPy array: a structure for efficient numerical computation." Computing in Science & Engineering 13.2 (2011): 22-30.
+.. [VanderWalt] Van der Walt, Stéfan, S Chris Colbert, and Gaël Varoquaux. "The NumPy array: a structure for efficient numerical computation." Computing in Science & Engineering 13.2 (2011): 22-30.
 
 .. [Behnel] Behnel, Stefan, Robert Bradshaw, Craig Citro, Lisandro Dalcin, Dag Sverre Seljebotn, and Kurt Smith. "Cython: The best of both worlds." Computing in Science & Engineering 13.2 (2011): 31-39.
 
