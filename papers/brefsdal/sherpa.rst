@@ -608,7 +608,6 @@ chain.
 .. figure:: b1_trace_s.png
    :align: center
    :alt: alternate text
-   :figclass: align-center
 
    A trace plot show the draws for :math:`\beta_1` per iteration :label:`trace`
 
@@ -630,7 +629,6 @@ well.
 .. figure:: mh_thurber2_s.png
    :align: center
    :alt: alternate text
-   :figclass: align-center
 
    Log-likelihood density using Metropolis-Hastings in pyBLoCXS. :label:`figmh1`
 
@@ -653,7 +651,6 @@ region of parameter space and distinct tail features in Figure
 .. figure:: metropolisMH_thurber2_s.png
    :align: center
    :alt: alternate text
-   :figclass: align-center
 
    Log-likelihood density using Metropolis-Hastings with Metropolis in pyBLoCXS. :label:`figmh2`
 

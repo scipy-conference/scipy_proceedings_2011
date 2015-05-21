@@ -115,37 +115,35 @@ Introduction
     \item Fine grain – where tasks may communicate prior to conclusion.
     \end{itemize}
 
-    We
-.. raw:: latex
+We shall review how SPM.Python augments the serial Python language
+to include a suite of parallel primitives, henceforth referred to
+as parallel closures. These closures represent the sole means by
+which to express any parallelism when leveraging SPM.Python. Their
+APIs are designed to be as close to the developer's intent as
+possible, and therefore easy to relate to.  Furthermore, the API
+of all closures represent the boundary that delineates the serial
+component (authored and maintained by the developer) from the
+parallel component (authored and embedded within SPM.Python).
 
-     shall review how SPM.Python augments the serial Python language
-    to include a suite of parallel primitives, henceforth referred to
-    as parallel closures. These closures represent the sole means by
-    which to express any parallelism when leveraging SPM.Python. Their
-    APIs are designed to be as close to the developer's intent as
-    possible, and therefore easy to relate to.  Furthermore, the API
-    of all closures represent the boundary that delineates the serial
-    component (authored and maintained by the developer) from the
-    parallel component (authored and embedded within SPM.Python).
+Specifically, the context for and solutions to four formerly
+open technical problems will be reviewed:
 
-    Specifically, the context for and solutions to four formerly
-    open technical problems will be reviewed:
-    (a) decoupling tracking of resources from management of resources,
-    (b) declaration and definition of parallel closures, the building blocks of all parallel constructs, 
-    (c) design and architecture of parallel closures in a way
-          so that serial components are delineated from parallel
-          components, and
-    (d) extensions to the general exception handling infrastructure
-          to account for exceptions across many compute resources.
+a) decoupling tracking of resources from management of resources,
+b) declaration and definition of parallel closures, the building blocks of all parallel constructs, 
+c) design and architecture of parallel closures in a way
+   so that serial components are delineated from parallel
+   components, and
+d) extensions to the general exception handling infrastructure
+   to account for exceptions across many compute resources.
 
-    We will illustrate key concepts by reviewing a simple, scalable,
-    fault-tolerant, self-cleaning 60-line Python script that can be
-    used to launch any stand-alone (x86 or GPU) applications in
-    parallel.  Appendix A will provide another self-contained Python
-    script that calculates the total number of prime numbers within a
-    given range; thus, illustrating how any Python module may be
-    parallelized using one of SPM.Python's several built-in parallel
-    closures.
+We will illustrate key concepts by reviewing a simple, scalable,
+fault-tolerant, self-cleaning 60-line Python script that can be
+used to launch any stand-alone (x86 or GPU) applications in
+parallel.  Appendix A will provide another self-contained Python
+script that calculates the total number of prime numbers within a
+given range; thus, illustrating how any Python module may be
+parallelized using one of SPM.Python's several built-in parallel
+closures.
 
 .. raw:: latex
 
@@ -266,8 +264,7 @@ Declaration and Definition of Parallel Closures
 
 .. figure:: fig-ppcoarsegrainPy.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspectives of coarse grain task manager closures.
    Note that such closures do not permit tasks to communicate prior to conclusion.
@@ -275,8 +272,7 @@ Declaration and Definition of Parallel Closures
 
 .. figure:: fig-ppfinegrainA.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspective of fine grain (limited) task manager closures.
    Note that such closures permit tasks to communicate only with the Hub.
@@ -284,8 +280,7 @@ Declaration and Definition of Parallel Closures
 
 .. figure:: fig-ppfinegrainB.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspective of fine grain (general) task manager closures.
    Note that such closures permit communication among Spokes and, if appropriate, with the Hub.
@@ -403,22 +398,19 @@ Fine grain (general)
 
 .. figure:: fig-ppcoarsegrainExcPy.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspectives of coarse grain parallel exceptions. :label:`fig-ppcoarsegrainExcPy`
 
 .. figure:: fig-ppfinegrainAExc.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspectives of fine grain (limited) parallel exceptions. :label:`fig-ppfinegrainAExc`
 
 .. figure:: fig-ppfinegrainBExc.pdf
    :width: 3.5in
-   :class: align-center
-   :figclass: hc
+   :figclass: h
 
    The architectural and runtime perspectives of fine grain (general) parallel exceptions. :label:`fig-ppfinegrainBExc`
 
@@ -467,11 +459,9 @@ Coarse grain
    various forms of parallel invariants, we need an ability to throw exceptions
    at any resource, but which may only be caught by the Hub.
 
-   Stated 
-
 .. raw:: latex
 
-    another way, in order to make our problem
+   Stated another way, in order to make our problem
    tractable in the context of coarse grain parallelism:
    \begin{itemize}
    \item[$\bullet$\hspace*{0.1cm}] on a Spoke, any

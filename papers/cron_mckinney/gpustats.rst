@@ -11,7 +11,7 @@ gpustats: GPU Library for Statistical Computing in Python
 ---------------------------------------------------------
 
 .. class:: abstract
-				   
+
    In this work we discuss **gpustats**, a new Python library for
    assisting in "big data" statistical computing applications,
    particularly Monte Carlo-based inference algorithms. The library
@@ -155,7 +155,7 @@ setting and found very promising results (100x speedup) on graphics cards that
 are now 2 years old ([JCGS]_).
 
 Another source of significant computation in statistical applications that we
- address is that of generating draws from random variables. In many
+address is that of generating draws from random variables. In many
 algorithms (e.g. Bayesian Markov Chain Monte Carlo methods), large data sets may
 require generating thousands or millions of random variables from various
 probability distributions at each iteration of the algorithm.
@@ -520,4 +520,4 @@ References
         http://mathema.tician.de/software/pycuda
 
 .. [PyOpenCL] A. Klöckner,
-          http://mathema.tician.de/software/pyopencl
+        http://mathema.tician.de/software/pyopencl
